@@ -18,7 +18,7 @@ it('sends ether from one account to another', function () {
     const amount = 42
 
     return Promise.fromCallback((callback) =>
-      erisDb.txs().send(privateKey, destination, amount, null, callback)
+      erisDb.txs().sendAndHold(privateKey, destination, amount, null, callback)
     ).then(() => {
       return Promise.fromCallback((callback) =>
         erisDb.accounts().getAccount(destination, callback)
