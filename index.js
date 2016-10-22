@@ -20,10 +20,15 @@ var url = require('url');
  * @returns {module:erisdb-ErisDB}
  */
 exports.createInstance = function(URL, options){
+  if (url.parse(URL).protocol === 'ws:') {
+    throw new Error('WebSocket is disabled until Eris DB complies with ' +
+      'JSON-RPC.  See: https://github.com/eris-ltd/eris-db/issues/355')
+  } else {
     var client;
     if(!URL || typeof(URL) !== "string" || URL === ""){
         URL = 'http://localhost:1337/rpc';
     }
     var validator = new validation.SinglePolicyValidator(true);
     return erisdb.createInstance(server(URL, options), validator);
+  }
 };
