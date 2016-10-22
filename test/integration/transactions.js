@@ -10,7 +10,7 @@ it('sends ether from one account to another', function () {
   const name = 'blockchain'
 
   return Promise.all([
-    test.newInstance(name),
+    test.newInstance(name, {protocol: 'http:'}),
     test.privateValidator(name)
   ]).spread((erisDb, validator) => {
     const privateKey = validator.priv_key[1]
