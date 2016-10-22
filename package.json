@@ -4,6 +4,7 @@
   "main": "./index.js",
   "dependencies": {
     "@nodeguy/json-rpc": "nodeguy/json-rpc#beta",
+    "@nodeguy/type": "^0.1.0",
     "iteray": "nodeguy/iteray#beta",
     "ramda": "^0.22.1",
     "request": "^2.74.0",
