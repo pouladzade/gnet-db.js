@@ -13,8 +13,8 @@ dependencies:
     - curl -L https://github.com/docker/machine/releases/download/$DOCKER_MACHINE_VERSION/docker-machine-`uname -s`-`uname -m` > $HOME/bin/docker-machine && chmod +x $HOME/bin/docker-machine
 
     # Install the Eris CLI.
-    - sudo add-apt-repository https://apt.eris.industries
-    - sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net --recv-keys 7D1F8F5A
+    - sudo add-apt-repository https://apt.monax.io
+    - curl -L https://apt.monax.io/APT-GPG-KEY | sudo apt-key add -
     - sudo apt-get --quiet update
     - sudo apt-get install --assume-yes --quiet eris
 
