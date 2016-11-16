@@ -2,16 +2,32 @@
 
 This is a JavaScript API for communicating with a [ErisDB](https://github.com/eris-ltd/eris-db) server.
 
-## Requirements
-
-* [Node.js](https://nodejs.org/) version 6 or higher
-* [Monax Eris](https://monax.io/) version 0.12
-
 ## Installation
+
+### Prerequisites
+
+* [Git](https://git-scm.com/)
+* [Monax Eris](https://monax.io/) version 0.12
+* [Node.js](https://nodejs.org/) version 6 or higher
+
+You can check the installed version of Node.js with the command:
+
+```shell
+$ node --version
+```
+
+If your distribution of Linux has a version older than 6 then you can
+update it using [NodeSource's distribution](https://github.com/nodesource/distributions).
+
+### To Install
 
 ```shell
 $ npm install eris-db
 ```
+
+#### Yarn Warning
+
+We don't recommend installing the library using [Yarn](https://yarnpkg.com/) because [it ignores the `npm-shrinkwrap.json` file](https://github.com/yarnpkg/yarn/issues/838) and may install different versions of dependencies than the ones we've tested.
 
 ## Usage
 
@@ -35,7 +51,7 @@ The parameters for `createInstance` is the server URL as a string. The client-ty
 
 There are bindings for all the RPC methods. All functions are on the form `function(param1, param2, ... , callback)`, where the callback is a function on the form `function(error,data)` (it is documented under the name `methodCallback`). The `data` object is the same as you would get by calling the corresponding RPC method directly.
 
-This is the over-all structure of the library. The `unsafe` flag means a private key is either sent or received, so should be used with care (dev only). 
+This is the over-all structure of the library. The `unsafe` flag means a private key is either sent or received, so should be used with care (dev only).
 
 NOTE: There will be links to the proper jsdoc and integration with erisindustries.com. For now, the components point to the actual code files and methods points to the web-API method in question.
 
@@ -58,11 +74,11 @@ NOTE: There will be links to the proper jsdoc and integration with erisindustrie
 The accounts object has methods for getting account and account-storage data.
 
 | Method | RPC method | Notes |
-| :----- | :--------- | :---- | 
-| Accounts.getAccounts | [erisdb.getAccounts](https://github.com/eris-ltd/eris-db/blob/master/api.md#getaccounts) | | 
-| Accounts.getAccount | [erisdb.getAccount](https://github.com/eris-ltd/eris-db/blob/master/api.md#getaccount) | | 
-| Accounts.getStorage | [erisdb.getStorage](https://github.com/eris-ltd/eris-db/blob/master/api.md#getstorage) | | 
-| Accounts.getStorageAt | [erisdb.getStorageAt](https://github.com/eris-ltd/eris-db/blob/master/api.md#getstorageat) | | 
+| :----- | :--------- | :---- |
+| Accounts.getAccounts | [erisdb.getAccounts](https://github.com/eris-ltd/eris-db/blob/master/api.md#getaccounts) | |
+| Accounts.getAccount | [erisdb.getAccount](https://github.com/eris-ltd/eris-db/blob/master/api.md#getaccount) | |
+| Accounts.getStorage | [erisdb.getStorage](https://github.com/eris-ltd/eris-db/blob/master/api.md#getstorage) | |
+| Accounts.getStorageAt | [erisdb.getStorageAt](https://github.com/eris-ltd/eris-db/blob/master/api.md#getstorageat) | |
 | Accounts.genPrivAccount | [erisdb.genPrivAccount](https://github.com/eris-ltd/eris-db/blob/master/api.md#genprivaccount) | unsafe |
 
 #### BlockChain
@@ -102,9 +118,9 @@ The tendermint client will generate and fire off events when important things ha
 
 The helper functions makes it easier to manage subscriptions. Normally you'd be using these functions rather then managing the subscriptions yourself.
 
-Helper functions always contain two callback functions - a `createCallback(error, data)` and an `eventCallback(error, data)`. 
+Helper functions always contain two callback functions - a `createCallback(error, data)` and an `eventCallback(error, data)`.
 
-The `createCallback` data is an [EventSub]() object, that can be used to do things like getting the event ID, the subscriber ID, and to stop the subscription. 
+The `createCallback` data is an [EventSub]() object, that can be used to do things like getting the event ID, the subscriber ID, and to stop the subscription.
 
 The `eventCallback` data is the event object. This object is different depending on the event type. In the case of `NewBlock` it will be a block, the consensus events is a transaction object, etc. More info can be found in the [api doc]().
 
@@ -124,7 +140,7 @@ The `eventCallback` data is the event object. This object is different depending
 
 `subSolidityEvent` and `subLogEvent` are two different names for the same type of subscription (log events).
 
-#### NameReg 
+#### NameReg
 
 The NameReg object has methods for accessing the name registry.
 
@@ -153,13 +169,13 @@ Client Version may be a bit misplaced
 
 A transaction is the equivalence of a database `write` operation. They can be done in two ways. There's the "dev" way, which is to call `transact` and pass along the target address (if any), data, gas, and a private key used for signing. It is very similar to the old Ethereum way of transacting, except Tendermint does not keep accounts in the client, so a private key needs to be sent along. This means the server **should either run on the same machine as the tendermint client, or in the same, private network**.
 
-Transacting via `broadcastTx` will be the standard way of doing things if you want the key to remain on the users machine. This requires a browser plugin for doing the actual signing, which we will add later. For now, you should stick to the `transact` method. 
+Transacting via `broadcastTx` will be the standard way of doing things if you want the key to remain on the users machine. This requires a browser plugin for doing the actual signing, which we will add later. For now, you should stick to the `transact` method.
 
 To get a private key for testing/developing, you can run `tendermint gen_account` if you have it installed. You can also run `tools/pa_generator.js` if you have a local node running. It will take the url as command line argument at some point...
 
 ##### Calls
 
-Calls provide read-only access to the smart contracts. It is used mostly to get data out of a contract-accounts storage by using the contracts accessor methods, but can be used to call any method that does not change any data in any account. A trivial example would be a contract function that takes two numbers as input, adds them, and then simply returns the sum. 
+Calls provide read-only access to the smart contracts. It is used mostly to get data out of a contract-accounts storage by using the contracts accessor methods, but can be used to call any method that does not change any data in any account. A trivial example would be a contract function that takes two numbers as input, adds them, and then simply returns the sum.
 
 There are two types of calls. `Call` takes a data string and an account address and calls the code in that account (if any) using the provided data as input. This is the standard method for read-only operations.
 
@@ -175,7 +191,7 @@ There are two types of calls. `Call` takes a data string and an account address 
 | Transactions.transactAndHold | [erisdb.transactAndHold](https://github.com/eris-ltd/eris-db/blob/master/api.md#transact-and-hold) | unsafe |
 | Transactions.transactNameReg | [erisdb.transactNameReg](https://github.com/eris-ltd/eris-db/blob/master/api.md#transactnamereg) | unsafe |
 
-`broadcastTx` is useless until we add a client-side signing solution. 
+`broadcastTx` is useless until we add a client-side signing solution.
 
 ## Documentation
 
