@@ -75,11 +75,11 @@ The accounts object has methods for getting account and account-storage data.
 
 | Method | RPC method | Notes |
 | :----- | :--------- | :---- |
-| Accounts.getAccounts | [erisdb.getAccounts](https://github.com/eris-ltd/eris-db/blob/master/api.md#getaccounts) | |
-| Accounts.getAccount | [erisdb.getAccount](https://github.com/eris-ltd/eris-db/blob/master/api.md#getaccount) | |
-| Accounts.getStorage | [erisdb.getStorage](https://github.com/eris-ltd/eris-db/blob/master/api.md#getstorage) | |
-| Accounts.getStorageAt | [erisdb.getStorageAt](https://github.com/eris-ltd/eris-db/blob/master/api.md#getstorageat) | |
-| Accounts.genPrivAccount | [erisdb.genPrivAccount](https://github.com/eris-ltd/eris-db/blob/master/api.md#genprivaccount) | unsafe |
+| Accounts.getAccounts | [erisdb.getAccounts](https://monax.io/docs/documentation/db/latest/specifications/api/#getaccounts) | |
+| Accounts.getAccount | [erisdb.getAccount](https://monax.io/docs/documentation/db/latest/specifications/api/#getaccount) | |
+| Accounts.getStorage | [erisdb.getStorage](https://monax.io/docs/documentation/db/latest/specifications/api/#getstorage) | |
+| Accounts.getStorageAt | [erisdb.getStorageAt](https://monax.io/docs/documentation/db/latest/specifications/api/#getstorageat) | |
+| Accounts.genPrivAccount | [erisdb.genPrivAccount](https://monax.io/docs/documentation/db/latest/specifications/api/#genprivaccount) | unsafe |
 
 #### BlockChain
 
@@ -87,13 +87,13 @@ The accounts object has methods for getting blockchain-related data, such as a l
 
 | Method | RPC method | Notes |
 | :----- | :--------- | :---- |
-| BlockChain.getInfo |  [erisdb.getBlockchainInfo](https://github.com/eris-ltd/eris-db/blob/master/api.md#getblockchaininfo) | |
-| BlockChain.getChainId | [erisdb.getChainId](https://github.com/eris-ltd/eris-db/blob/master/api.md#getchainid) | |
-| BlockChain.getGenesisHash | [erisdb.getGenesisHash](https://github.com/eris-ltd/eris-db/blob/master/api.md#getgenesishash) | |
-| BlockChain.getLatestBlockHeight | [erisdb.getLatestBlockHeight](https://github.com/eris-ltd/eris-db/blob/master/api.md#getlatestblockheight) | |
-| BlockChain.getLatestBlock | [erisdb.getLatestBlock](https://github.com/eris-ltd/eris-db/blob/master/api.md#getlatestblock) | |
-| BlockChain.getBlocks | [erisdb.getBlocks](https://github.com/eris-ltd/eris-db/blob/master/api.md#getblocks) | |
-| BlockChain.getBlock | [erisdb.getBlock](https://github.com/eris-ltd/eris-db/blob/master/api.md#getblock) | |
+| BlockChain.getInfo |  [erisdb.getBlockchainInfo](https://monax.io/docs/documentation/db/latest/specifications/api/#getblockchaininfo) | |
+| BlockChain.getChainId | [erisdb.getChainId](https://monax.io/docs/documentation/db/latest/specifications/api/#getchainid) | |
+| BlockChain.getGenesisHash | [erisdb.getGenesisHash](https://monax.io/docs/documentation/db/latest/specifications/api/#getgenesishash) | |
+| BlockChain.getLatestBlockHeight | [erisdb.getLatestBlockHeight](https://monax.io/docs/documentation/db/latest/specifications/api/#getlatestblockheight) | |
+| BlockChain.getLatestBlock | [erisdb.getLatestBlock](https://monax.io/docs/documentation/db/latest/specifications/api/#getlatestblock) | |
+| BlockChain.getBlocks | [erisdb.getBlocks](https://monax.io/docs/documentation/db/latest/specifications/api/#getblocks) | |
+| BlockChain.getBlock | [erisdb.getBlock](https://monax.io/docs/documentation/db/latest/specifications/api/#getblock) | |
 
 #### Consensus
 
@@ -101,8 +101,8 @@ The consensus object has methods for getting consensus-related data.
 
 | Method | RPC method | Notes |
 | :----- | :--------- | :---- |
-| Consensus.getState |   [erisdb.getConsensusState](https://github.com/eris-ltd/eris-db/blob/master/api.md#getconsensusstate) | |
-| Consensus.getValidators | [erisdb.getValidators](https://github.com/eris-ltd/eris-db/blob/master/api.md#getvalidators) | |
+| Consensus.getState |   [erisdb.getConsensusState](https://monax.io/docs/documentation/db/latest/specifications/api/#getconsensusstate) | |
+| Consensus.getValidators | [erisdb.getValidators](https://monax.io/docs/documentation/db/latest/specifications/api/#getvalidators) | |
 
 #### Events
 
@@ -110,9 +110,9 @@ The tendermint client will generate and fire off events when important things ha
 
 | Method | RPC method | Notes |
 | :----- | :--------- | :---- |
-| Events.subscribe | [erisdb.eventSubscribe](https://github.com/eris-ltd/eris-db/blob/master/api.md#eventsubscribe) | |
-| Events.unsubscribe | [erisdb.eventUnsubscribe](https://github.com/eris-ltd/eris-db/blob/master/api.md#eventunubscribe) | |
-| Events.poll | [erisdb.eventPoll](https://github.com/eris-ltd/eris-db/blob/master/api.md#eventpoll) | |
+| Events.subscribe | [erisdb.eventSubscribe](https://monax.io/docs/documentation/db/latest/specifications/api/#eventsubscribe) | |
+| Events.unsubscribe | [erisdb.eventUnsubscribe](https://monax.io/docs/documentation/db/latest/specifications/api/#eventunubscribe) | |
+| Events.poll | [erisdb.eventPoll](https://monax.io/docs/documentation/db/latest/specifications/api/#eventpoll) | |
 
 ##### Helpers
 
@@ -146,8 +146,8 @@ The NameReg object has methods for accessing the name registry.
 
 | Method | RPC method | Notes |
 | :----- | :--------- | :---- |
-| NameReg.getEntry | [erisdb.getNameRegEntry](https://github.com/eris-ltd/eris-db/blob/master/api.md#get-namereg-entry) | |
-| NameReg.getEntries | [erisdb.getNameRegEntries](https://github.com/eris-ltd/eris-db/blob/master/api.md#get-namereg-entries) | |
+| NameReg.getEntry | [erisdb.getNameRegEntry](https://monax.io/docs/documentation/db/latest/specifications/api/#get-namereg-entry) | |
+| NameReg.getEntries | [erisdb.getNameRegEntries](https://monax.io/docs/documentation/db/latest/specifications/api/#get-namereg-entries) | |
 
 #### Network
 
@@ -157,13 +157,13 @@ Client Version may be a bit misplaced
 
 | Method | RPC method | Notes |
 | :----- | :--------- | :---- |
-| Network.getInfo | [erisdb.getNetworkInfo](https://github.com/eris-ltd/eris-db/blob/master/api.md#getnetworkinfo) |  |
-| Network.getClientVersion | [erisdb.getClientVersion](https://github.com/eris-ltd/eris-db/blob/master/api.md#getclientversion) | |
-| Network.getMoniker | [erisdb.getMoniker](https://github.com/eris-ltd/eris-db/blob/master/api.md#getmoniker) | |
-| Network.isListening | [erisdb.isListening](https://github.com/eris-ltd/eris-db/blob/master/api.md#islistening) | |
-| Network.getListeners | [erisdb.getListeners](https://github.com/eris-ltd/eris-db/blob/master/api.md#getlisteners) | |
-| Network.getPeers | [erisdb.getPeers](https://github.com/eris-ltd/eris-db/blob/master/api.md#getpeers) | |
-| Network.getPeer | [erisdb.getPeer](https://github.com/eris-ltd/eris-db/blob/master/api.md#getpeer) | |
+| Network.getInfo | [erisdb.getNetworkInfo](https://monax.io/docs/documentation/db/latest/specifications/api/#getnetworkinfo) |  |
+| Network.getClientVersion | [erisdb.getClientVersion](https://monax.io/docs/documentation/db/latest/specifications/api/#getclientversion) | |
+| Network.getMoniker | [erisdb.getMoniker](https://monax.io/docs/documentation/db/latest/specifications/api/#getmoniker) | |
+| Network.isListening | [erisdb.isListening](https://monax.io/docs/documentation/db/latest/specifications/api/#islistening) | |
+| Network.getListeners | [erisdb.getListeners](https://monax.io/docs/documentation/db/latest/specifications/api/#getlisteners) | |
+| Network.getPeers | [erisdb.getPeers](https://monax.io/docs/documentation/db/latest/specifications/api/#getpeers) | |
+| Network.getPeer | [erisdb.getPeer](https://monax.io/docs/documentation/db/latest/specifications/api/#getpeer) | |
 
 #### Transactions
 
@@ -183,13 +183,13 @@ There are two types of calls. `Call` takes a data string and an account address 
 
 | Method | RPC method | Notes |
 | :----- | :--------- | :---- |
-| Transactions.broadcastTx | [erisdb.broadcastTx](https://github.com/eris-ltd/eris-db/blob/master/api.md#broadcasttx) | see below |
-| Transactions.getUnconfirmedTxs | [erisdb.getUnconfirmedTxs](https://github.com/eris-ltd/eris-db/blob/master/api.md#getunconfirmedtxs) | |
-| Transactions.call | [erisdb.call](https://github.com/eris-ltd/eris-db/blob/master/api.md#call) | |
-| Transactions.callCode | [erisdb.callCode](https://github.com/eris-ltd/eris-db/blob/master/api.md#callcode) | |
-| Transactions.transact | [erisdb.transact](https://github.com/eris-ltd/eris-db/blob/master/api.md#transact) | unsafe |
-| Transactions.transactAndHold | [erisdb.transactAndHold](https://github.com/eris-ltd/eris-db/blob/master/api.md#transact-and-hold) | unsafe |
-| Transactions.transactNameReg | [erisdb.transactNameReg](https://github.com/eris-ltd/eris-db/blob/master/api.md#transactnamereg) | unsafe |
+| Transactions.broadcastTx | [erisdb.broadcastTx](https://monax.io/docs/documentation/db/latest/specifications/api/#broadcasttx) | see below |
+| Transactions.getUnconfirmedTxs | [erisdb.getUnconfirmedTxs](https://monax.io/docs/documentation/db/latest/specifications/api/#getunconfirmedtxs) | |
+| Transactions.call | [erisdb.call](https://monax.io/docs/documentation/db/latest/specifications/api/#call) | |
+| Transactions.callCode | [erisdb.callCode](https://monax.io/docs/documentation/db/latest/specifications/api/#callcode) | |
+| Transactions.transact | [erisdb.transact](https://monax.io/docs/documentation/db/latest/specifications/api/#transact) | unsafe |
+| Transactions.transactAndHold | [erisdb.transactAndHold](https://monax.io/docs/documentation/db/latest/specifications/api/#transact-and-hold) | unsafe |
+| Transactions.transactNameReg | [erisdb.transactNameReg](https://monax.io/docs/documentation/db/latest/specifications/api/#transactnamereg) | unsafe |
 
 `broadcastTx` is useless until we add a client-side signing solution.
 
@@ -199,7 +199,7 @@ Generate documentation using the command `npm run doc`.
 
 ## Copyright
 
-Copyright 2015 Eris Industries
+Copyright 2015 Monax
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

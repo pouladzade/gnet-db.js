@@ -10,7 +10,9 @@ machine:
 dependencies:
   pre:
     # Install Docker Machine because CircleCI's Docker support is hobbled.
-    - curl -L https://github.com/docker/machine/releases/download/$DOCKER_MACHINE_VERSION/docker-machine-`uname -s`-`uname -m` > $HOME/bin/docker-machine && chmod +x $HOME/bin/docker-machine
+    - "curl -L https://github.com/docker/machine/releases/download/$DOCKER_MACH\
+      INE_VERSION/docker-machine-`uname -s`-`uname -m` > $HOME/bin/docker-machi\
+      ne && chmod +x $HOME/bin/docker-machine"
 
     # Install the Eris CLI.
     - ./CircleCI/CLI.sh
@@ -33,4 +35,4 @@ deployment:
     commands:
       - printf "$NPM_USERNAME\n$NPM_PASSWORD\n$NPM_EMAIL\n" | npm login
       - npm run publish
-      - ./publishDoc.sh master
+      - JSDoc/publish.sh
