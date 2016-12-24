@@ -1,6 +1,6 @@
 {
   "name": "eris-db",
-  "version": "0.15.8",
+  "version": "0.15.9",
   "main": "./index.js",
   "dependencies": {
     "@nodeguy/json-rpc": "0.2.0",
