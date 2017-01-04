@@ -1,5 +1,6 @@
 {
   "name": "eris-db",
+  "description": "Javascript library that calls an erisdb server over rpc.",
   "version": "0.15.9",
   "author": "AndreasEris",
   "authors": [
