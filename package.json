@@ -1,7 +1,17 @@
 {
   "name": "eris-db",
   "version": "0.15.9",
-  "main": "./index.js",
+  "author": "AndreasEris",
+  "authors": [
+    {
+      "name": "Andreas Olofsson",
+      "email": "andreas@erisindustries.com",
+      "url": "http://erisindustries.com"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/eris-ltd/eris-db.js/issues"
+  },
   "dependencies": {
     "@nodeguy/json-rpc": "0.2.0",
     "@nodeguy/type": "0.2.0",
@@ -21,38 +31,28 @@
     "mocha": "3.1.2",
     "publish": "0.6.0"
   },
-  "scripts": {
-    "predoc": "rm -rf doc",
-    "doc": "jsdoc --configure JSDoc/conf.json --destination doc index.js lib README.md",
-    "publish": "bundle-dependencies update && publish",
-    "pretest": "eris chains make blockchain",
-    "test": "mocha test/integration"
-  },
+  "homepage": "https://github.com/eris-ltd/eris-db.js",
+  "keywords": [
+    "API",
+    "RPC",
+    "eris",
+    "erisdb",
+    "javascript",
+    "node.js"
+  ],
+  "license": "GPL-3.0",
+  "main": "./index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/eris-ltd/eris-db.js"
   },
-  "homepage": "https://github.com/eris-ltd/eris-db.js",
-  "bugs": {
-    "url": "https://github.com/eris-ltd/eris-db.js/issues"
+  "scripts": {
+    "doc": "jsdoc --configure JSDoc/conf.json --destination doc index.js lib README.md",
+    "predoc": "rm -rf doc",
+    "pretest": "eris chains make blockchain",
+    "publish": "bundle-dependencies update && publish",
+    "test": "mocha test/integration"
   },
-  "keywords": [
-    "eris",
-    "erisdb",
-    "javascript",
-    "node.js",
-    "API",
-    "RPC"
-  ],
-  "author": "AndreasEris",
-  "authors": [
-    {
-      "name": "Andreas Olofsson",
-      "email": "andreas@erisindustries.com",
-      "url": "http://erisindustries.com"
-    }
-  ],
-  "license": "GPL-3.0",
   "standard": {
     "globals": [
       "after",
