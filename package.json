@@ -1,6 +1,6 @@
 {
   "name": "eris-db",
-  "version": "0.15.8",
+  "version": "0.15.9",
   "main": "./index.js",
   "dependencies": {
     "@nodeguy/json-rpc": "0.2.0",
@@ -17,12 +17,13 @@
   "devDependencies": {
     "bundle-dependencies": "1.0.2",
     "istanbul": "0.4.5",
+    "jsdoc": "3.4.3",
     "mocha": "3.1.2",
     "publish": "0.6.0"
   },
   "scripts": {
     "predoc": "rm -rf doc",
-    "doc": "jsdoc --configure 'JSDoc configuration.json' --template node_modules/ink-docstrap/template index.js lib/*.js lib/rpc/*.js README.md --destination doc",
+    "doc": "jsdoc --configure JSDoc/conf.json --destination doc index.js lib README.md",
     "publish": "bundle-dependencies update && publish",
     "pretest": "eris chains make blockchain",
     "test": "mocha test/integration"
