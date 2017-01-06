@@ -37,15 +37,18 @@
   },
   "homepage": "https://github.com/eris-ltd/eris-db.js",
   "keywords": [
-    "API",
-    "RPC",
+    "Monax",
     "eris",
-    "erisdb",
-    "javascript",
-    "node.js"
+    "erisdb"
   ],
   "license": "GPL-3.0",
   "main": "./index.js",
+  "maintainers": [
+    {
+      "name": "David Braun",
+      "email": "David@Monax.io"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/eris-ltd/eris-db.js"
