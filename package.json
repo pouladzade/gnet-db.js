@@ -56,7 +56,6 @@
     "doc": "jsdoc --configure JSDoc/conf.json --destination doc index.js lib README.md",
     "predoc": "rm -rf doc",
     "pretest": "eris chains make blockchain",
-    "publish": "bundle-dependencies update && npm publish",
     "test": "mocha test/integration"
   },
   "standard": {
