@@ -25,10 +25,6 @@ update it using [NodeSource's distribution](https://github.com/nodesource/distri
 $ npm install eris-db
 ```
 
-#### Yarn Warning
-
-We don't recommend installing the library using [Yarn](https://yarnpkg.com/) because [it ignores the `npm-shrinkwrap.json` file](https://github.com/yarnpkg/yarn/issues/838) and may install different versions of dependencies than the ones we've tested.
-
 ## Usage
 
 If you created an ErisDB server using the [Eris CLI](https://github.com/eris-ltd/eris-cli) tool, you can find out its IP address using the following command:
