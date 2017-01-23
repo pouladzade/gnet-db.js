@@ -9,6 +9,7 @@
 
 var erisdb = require('./lib/erisdb');
 const server = require('./lib/server')
+const transports = require('./lib/transports')
 var validation = require('./lib/validation');
 var url = require('url');
 
@@ -19,16 +20,15 @@ var url = require('url');
  * @param {string} URL The RPC endpoint URL.
  * @returns {module:erisdb-ErisDB}
  */
-exports.createInstance = function(URL, options){
-  if (url.parse(URL).protocol === 'ws:') {
+exports.createInstance = function(urlString, options){
+  const parsed = url.parse(urlString)
+
+  if (parsed.protocol === 'ws:') {
     throw new Error('WebSocket is disabled until Eris DB complies with ' +
       'JSON-RPC.  See: https://github.com/eris-ltd/eris-db/issues/355')
   } else {
-    var client;
-    if(!URL || typeof(URL) !== "string" || URL === ""){
-        URL = 'http://localhost:1337/rpc';
-    }
     var validator = new validation.SinglePolicyValidator(true);
-    return erisdb.createInstance(server(URL, options), validator);
+    const transport = transports(parsed)
+    return erisdb.createInstance(server(transport, options), validator);
   }
 };
