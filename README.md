@@ -193,6 +193,10 @@ There are two types of calls. `Call` takes a data string and an account address 
 
 Generate documentation using the command `npm run doc`.
 
+## Debugging
+
+Debugging information will display on `stderr` if the library is run with `NODE_DEBUG=eris` in the environment.
+
 ## Copyright
 
 Copyright 2015 Monax
