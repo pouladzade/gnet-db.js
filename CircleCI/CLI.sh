@@ -12,7 +12,7 @@ if [ $CIRCLE_BRANCH = 'master' ]; then
 else
   go get github.com/eris-ltd/eris-cli/cmd/eris
   cd $HOME/.go_workspace/src/github.com/eris-ltd/eris-cli/cmd/eris
-  git checkout develop
+  git checkout $CIRCLE_BRANCH
   go install
 fi
 
