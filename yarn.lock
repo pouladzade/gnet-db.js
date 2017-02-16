@@ -6,9 +6,9 @@
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@nodeguy/generic/-/generic-2.1.1.tgz#893f50deb4b1f30a3a95e47dca722dd2a5464566"
 
-"@nodeguy/generic@nodeguy/generic#beta":
+"@nodeguy/generic@^3.0.0":
   version "3.0.0"
-  resolved "https://codeload.github.com/nodeguy/generic/tar.gz/74dcd6aa2f6edc6acf48992a5d83a1812bacee4c"
+  resolved "https://registry.yarnpkg.com/@nodeguy/generic/-/generic-3.0.0.tgz#85ccaf8c5a48e675bca06720097ae03a99df75f6"
 
 "@nodeguy/json-rpc@0.2.0":
   version "0.2.0"

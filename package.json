@@ -14,7 +14,7 @@
     "url": "https://github.com/eris-ltd/eris-db.js/issues"
   },
   "dependencies": {
-    "@nodeguy/generic": "nodeguy/generic#beta",
+    "@nodeguy/generic": "^3.0.0",
     "@nodeguy/json-rpc": "0.2.0",
     "@nodeguy/type": "0.2.0",
     "bluebird": "3.4.6",
