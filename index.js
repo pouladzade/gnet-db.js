@@ -11,10 +11,10 @@ var erisdb = require('./lib/erisdb');
 const generic = require('@nodeguy/generic')
 const I = require('iteray')
 const is = require('@nodeguy/type').is
+const jsonRpc = require('@nodeguy/json-rpc')
 const R = require('ramda')
 const server = require('./lib/server')
 const stream = require('stream')
-const transports = require('./lib/transports')
 const util = require('util')
 var validation = require('./lib/validation');
 var url = require('url');
@@ -53,8 +53,7 @@ createInstance.method([is(String)],
       throw new Error('WebSocket is disabled until Eris DB complies with ' +
         'JSON-RPC.  See: https://github.com/eris-ltd/eris-db/issues/355')
     } else {
-      var validator = new validation.SinglePolicyValidator(true);
-      return createInstance(transports(parsed))
+      return createInstance(jsonRpc.transport(parsed))
     }
   }
 )
