@@ -193,6 +193,26 @@ There are two types of calls. `Call` takes a data string and an account address 
 
 Generate documentation using the command `npm run doc`.
 
+## Testing
+
+To test the library against pre-recorded vectors:
+
+```
+npm test
+```
+
+To test the library against Eris DB while recording vectors:
+
+```
+TEST=record npm test
+```
+
+To test Eris DB against pre-recorded vectors without exercising the library:
+
+```
+TEST=server npm test
+```
+
 ## Debugging
 
 Debugging information will display on `stderr` if the library is run with `NODE_DEBUG=eris` in the environment.

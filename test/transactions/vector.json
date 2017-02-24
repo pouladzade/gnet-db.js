@@ -1,0 +1,88 @@
+{
+  "it": {
+    "sends ether from one account to another": [
+      {
+        "input": {
+          "done": false,
+          "value": {
+            "method": "erisdb.sendAndHold",
+            "params": {
+              "priv_key": "86F527B157FF098AC6BEDC38B0478A3099E03F4E55D46429DD365A359706557916137A2137316939F502F2BE428B8A9802EA9A0A0C4A960580D128EDC24E5B4A",
+              "to_address": "0000000000000000000000000000000000000010",
+              "amount": 42
+            },
+            "jsonrpc": "2.0",
+            "id": "1"
+          }
+        }
+      },
+      {
+        "output": {
+          "done": false,
+          "value": {
+            "result": {
+              "tx_hash": "CB475DEB22EFEE014AE8968CBB2AF7597349F7A9",
+              "creates_contract": 0,
+              "contract_addr": ""
+            },
+            "error": null,
+            "id": "1",
+            "jsonrpc": "2.0"
+          }
+        }
+      },
+      {
+        "input": {
+          "done": false,
+          "value": {
+            "method": "erisdb.getAccount",
+            "params": {
+              "address": "0000000000000000000000000000000000000010"
+            },
+            "jsonrpc": "2.0",
+            "id": "2"
+          }
+        }
+      },
+      {
+        "output": {
+          "done": false,
+          "value": {
+            "result": {
+              "address": "0000000000000000000000000000000000000010",
+              "pub_key": null,
+              "sequence": 0,
+              "balance": 42,
+              "code": "",
+              "storage_root": "",
+              "permissions": {
+                "base": {
+                  "perms": 0,
+                  "set": 0
+                },
+                "roles": []
+              }
+            },
+            "error": null,
+            "id": "2",
+            "jsonrpc": "2.0"
+          }
+        }
+      }
+    ]
+  },
+  "validator": {
+    "address": "E9978233F1DF5CBD52269B933D42E6203F2D5D71",
+    "pub_key": [
+      1,
+      "16137A2137316939F502F2BE428B8A9802EA9A0A0C4A960580D128EDC24E5B4A"
+    ],
+    "priv_key": [
+      1,
+      "86F527B157FF098AC6BEDC38B0478A3099E03F4E55D46429DD365A359706557916137A2137316939F502F2BE428B8A9802EA9A0A0C4A960580D128EDC24E5B4A"
+    ],
+    "last_height": 0,
+    "last_round": 0,
+    "last_step": 0
+  }
+}

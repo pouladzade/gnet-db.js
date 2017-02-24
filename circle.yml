@@ -5,6 +5,7 @@ machine:
     version: 6.1.0
   environment:
     DOCKER_MACHINE_VERSION: "v0.8.2"
+    ERIS_PULL_APPROVE: true
     MOCHA_FILE: "$CIRCLE_TEST_REPORTS/test-results.xml"
 
 dependencies:
@@ -23,9 +24,9 @@ test:
     # "dependencies" in case there's a failure of any kind to guarantee that the
     # machine will be cleaned up.
     - docker-machine create --driver digitalocean default
-    - eval $(docker-machine env default); ERIS_PULL_APPROVE=true eris init
+    - eval $(docker-machine env default); eris init
   override:
-    - eval $(docker-machine env default); npm test
+    - eval $(docker-machine env default); ./CircleCI/test.sh
   post:
     - docker-machine rm -y default
 
