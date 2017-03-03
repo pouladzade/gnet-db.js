@@ -4,7 +4,7 @@ machine:
   node:
     version: 6.1.0
   environment:
-    DOCKER_MACHINE_VERSION: "v0.8.2"
+    DOCKER_MACHINE_VERSION: "v0.10.0"
     ERIS_PULL_APPROVE: true
     MOCHA_FILE: "$CIRCLE_TEST_REPORTS/test-results.xml"
 
