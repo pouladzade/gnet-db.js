@@ -58,7 +58,7 @@
   "scripts": {
     "doc": "jsdoc --configure JSDoc/conf.json --destination doc index.js lib README.md",
     "predoc": "rm -rf doc",
-    "pretest": "eris chains make blockchain",
+    "make": "eris chains make blockchain",
     "test": "mocha --recursive test"
   },
   "standard": {

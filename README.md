@@ -201,6 +201,12 @@ To test the library against pre-recorded vectors:
 npm test
 ```
 
+To make a blockchain for testing:
+
+```
+npm run make
+```
+
 To test the library against Eris DB while recording vectors:
 
 ```
