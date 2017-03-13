@@ -21,8 +21,7 @@
     "g-functions": "0.2.0",
     "iteray": "0.5.1",
     "mz": "2.6.0",
-    "ramda": "0.23.0",
-    "untildify": "3.0.2"
+    "ramda": "0.23.0"
   },
   "devDependencies": {
     "bundle-dependencies": "1.0.2",
@@ -58,7 +57,6 @@
   "scripts": {
     "doc": "jsdoc --configure JSDoc/conf.json --destination doc index.js lib README.md",
     "predoc": "rm -rf doc",
-    "make": "eris chains make blockchain",
     "test": "mocha --recursive test"
   },
   "standard": {

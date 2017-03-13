@@ -10,12 +10,16 @@
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@nodeguy/generic/-/generic-2.1.1.tgz#893f50deb4b1f30a3a95e47dca722dd2a5464566"
 
-"@nodeguy/json-rpc@0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@nodeguy/json-rpc/-/json-rpc-0.2.1.tgz#335e7002746935d695ec93027b0c69a82f0bc467"
+"@nodeguy/json-rpc@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@nodeguy/json-rpc/-/json-rpc-0.3.0.tgz#67bc9a30bfb2d39cbbd91d664b00d09df2d47bc8"
   dependencies:
+    "@nodeguy/generic" "^3.0.0"
     iteray "^0.5.0"
-    ramda "^0.22.1"
+    ramda "^0.23.0"
+    request "2.79.0"
+    request-promise "4.1.1"
+    ws "2.0.3"
 
 "@nodeguy/type@0.2.0", "@nodeguy/type@^0.2.0":
   version "0.2.0"
@@ -114,13 +118,9 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-bluebird@3.4.7:
+bluebird@3.4.7, bluebird@^3.4.1, bluebird@~3.4.6:
   version "3.4.7"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.4.7.tgz#f72d760be09b7f76d08ed8fae98b289a8d05fab3"
-
-bluebird@^3.4.1, bluebird@~3.4.6:
-  version "3.4.6"
-  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.4.6.tgz#01da8d821d87813d158967e743d5fe6c62cf8c0f"
 
 boom@2.x.x:
   version "2.10.1"
@@ -342,6 +342,13 @@ form-data@~2.1.1:
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
+
+g-functions@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/g-functions/-/g-functions-0.2.0.tgz#19d6d0fd4c65809e2981959e96507edb8eec3c49"
+  dependencies:
+    "@nodeguy/generic" "3.0.0"
+    "@nodeguy/type" "0.2.0"
 
 g-functions@^0.1.1:
   version "0.1.1"
@@ -879,13 +886,9 @@ qs@~6.3.0:
   version "6.3.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.3.1.tgz#918c0b3bcd36679772baf135b1acb4c1651ed79d"
 
-ramda@0.23.0:
+ramda@0.23.0, ramda@^0.23.0:
   version "0.23.0"
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.23.0.tgz#ccd13fff73497a93974e3e86327bfd87bd6e8e2b"
-
-ramda@^0.22.1:
-  version "0.22.1"
-  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.22.1.tgz#031da0c3df417c5b33c96234757eb37033f36a0e"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
@@ -912,7 +915,7 @@ request-promise-core@1.1.1:
   dependencies:
     lodash "^4.13.1"
 
-request-promise@^4.1.1:
+request-promise@4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/request-promise/-/request-promise-4.1.1.tgz#26021e4f6f56fd4c309f6bf1ebd8c97a95ac1fb5"
   dependencies:
@@ -920,7 +923,7 @@ request-promise@^4.1.1:
     request-promise-core "1.1.1"
     stealthy-require "^1.0.0"
 
-request@^2.79.0:
+request@2.79.0:
   version "2.79.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.79.0.tgz#4dfe5bf6be8b8cdc37fcf93e04b65577722710de"
   dependencies:
@@ -1084,7 +1087,7 @@ taffydb@2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/taffydb/-/taffydb-2.6.2.tgz#7cbcb64b5a141b6a2efc2c5d2c67b4e150b2a268"
 
-test-vector@^0.1.0:
+test-vector@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/test-vector/-/test-vector-0.1.0.tgz#23a4ef86350dac48f3af34996107eb24b7774e63"
   dependencies:
@@ -1155,10 +1158,6 @@ underscore@~1.8.3:
   version "1.8.3"
   resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.8.3.tgz#4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022"
 
-untildify@3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/untildify/-/untildify-3.0.2.tgz#7f1f302055b3fea0f3e81dc78eb36766cb65e3f1"
-
 uuid@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.1.tgz#6544bba2dfda8c1cf17e629a3a305e2bb1fee6c1"
@@ -1217,9 +1216,15 @@ wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
 
-ws@^2.0.3:
+ws@2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/ws/-/ws-2.0.3.tgz#532fd499c3f7d7d720e543f1f807106cfc57d9cb"
+  dependencies:
+    ultron "~1.1.0"
+
+ws@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-2.1.0.tgz#b24eaed9609f8632dd51e3f7698619a90fddcc92"
   dependencies:
     ultron "~1.1.0"
 
