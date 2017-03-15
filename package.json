@@ -15,9 +15,9 @@
   },
   "dependencies": {
     "@nodeguy/generic": "3.0.0",
-    "@nodeguy/json-rpc": "0.3.0",
+    "@nodeguy/json-rpc": "0.3.1",
     "@nodeguy/type": "0.2.0",
-    "bluebird": "3.4.7",
+    "bluebird": "3.5.0",
     "g-functions": "0.2.0",
     "iteray": "0.5.1",
     "mz": "2.6.0",
@@ -28,10 +28,10 @@
     "istanbul": "0.4.5",
     "jsdoc": "3.4.3",
     "mocha": "3.2.0",
-    "request": "2.79.0",
+    "request": "2.81.0",
     "request-promise": "4.1.1",
     "test-vector": "0.1.0",
-    "ws": "2.1.0"
+    "ws": "2.2.1"
   },
   "engines": {
     "node": ">=6"
