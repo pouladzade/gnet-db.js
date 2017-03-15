@@ -3,6 +3,7 @@ set -o errexit
 set -o xtrace
 
 apt-get install --yes \
-  git
+  curl \
+  git \
   jq
   
