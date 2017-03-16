@@ -1,0 +1,88 @@
+{
+  "it": {
+    "sends ether from one account to another": [
+      {
+        "input": {
+          "done": false,
+          "value": {
+            "method": "erisdb.sendAndHold",
+            "params": {
+              "priv_key": "3277A2032C17A5F033B7251B2C212C42AE51CAB586AC077C6770EC3E51FAA10D9CE87DBDC903097B9080051D4ED5E2493BF70BDC3EE5800A608B59AF4F0F8C19",
+              "to_address": "0000000000000000000000000000000000000010",
+              "amount": 42
+            },
+            "id": "2YhhQ5+MkN8zGRHNP/vMZgMwVWb7RbJczKe19aLTr9o=",
+            "jsonrpc": "2.0"
+          }
+        }
+      },
+      {
+        "output": {
+          "done": false,
+          "value": {
+            "result": {
+              "tx_hash": "CB475DEB22EFEE014AE8968CBB2AF7597349F7A9",
+              "creates_contract": 0,
+              "contract_addr": ""
+            },
+            "error": null,
+            "id": "2YhhQ5+MkN8zGRHNP/vMZgMwVWb7RbJczKe19aLTr9o=",
+            "jsonrpc": "2.0"
+          }
+        }
+      },
+      {
+        "input": {
+          "done": false,
+          "value": {
+            "method": "erisdb.getAccount",
+            "params": {
+              "address": "0000000000000000000000000000000000000010"
+            },
+            "id": "6FLX/NktHWu7/dAPiFNFYmEFRtd6yQztexR8LA4Psc8=",
+            "jsonrpc": "2.0"
+          }
+        }
+      },
+      {
+        "output": {
+          "done": false,
+          "value": {
+            "result": {
+              "address": "0000000000000000000000000000000000000010",
+              "pub_key": null,
+              "sequence": 0,
+              "balance": 42,
+              "code": "",
+              "storage_root": "",
+              "permissions": {
+                "base": {
+                  "perms": 0,
+                  "set": 0
+                },
+                "roles": []
+              }
+            },
+            "error": null,
+            "id": "6FLX/NktHWu7/dAPiFNFYmEFRtd6yQztexR8LA4Psc8=",
+            "jsonrpc": "2.0"
+          }
+        }
+      }
+    ]
+  },
+  "validator": {
+    "address": "D40EE91D5C4F29D63B91CF5F0A97C83B98D32FBF",
+    "pub_key": [
+      1,
+      "9CE87DBDC903097B9080051D4ED5E2493BF70BDC3EE5800A608B59AF4F0F8C19"
+    ],
+    "priv_key": [
+      1,
+      "3277A2032C17A5F033B7251B2C212C42AE51CAB586AC077C6770EC3E51FAA10D9CE87DBDC903097B9080051D4ED5E2493BF70BDC3EE5800A608B59AF4F0F8C19"
+    ],
+    "last_height": 0,
+    "last_round": 0,
+    "last_step": 0
+  }
+}

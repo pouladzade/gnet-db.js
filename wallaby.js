@@ -1,11 +1,13 @@
 module.exports = function () {
   return {
     files: [
-      'lib/**/*.js'
+      'index.js',
+      'lib/**/*.js',
+      'test/**/*.json'
     ],
 
     tests: [
-      'test/unit/*.js'
+      'test/**/*.js'
     ],
 
     env: {
