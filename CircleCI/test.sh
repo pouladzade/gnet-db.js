@@ -7,9 +7,9 @@ npm test
 
 if [ "$CIRCLE_BRANCH" = "master" ]; then
   # Install Docker Machine because CircleCI's Docker support is hobbled.
-  curl -L https://github.com/docker/machine/releases/download/$DOCKER_MACH\
-  INE_VERSION/docker-machine-`uname -s`-`uname -m` > $HOME/bin/docker-machi\
-  ne && chmod +x $HOME/bin/docker-machine
+  curl -L https://github.com/docker/machine/releases/download/$DOCKER_MACHINE_\
+VERSION/docker-machine-`uname -s`-`uname -m` > $HOME/bin/docker-machine && \
+chmod +x $HOME/bin/docker-machine
 
   docker-machine create --driver digitalocean default
   eval $(docker-machine env default)
