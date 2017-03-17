@@ -7,11 +7,11 @@
           "value": {
             "method": "erisdb.sendAndHold",
             "params": {
-              "priv_key": "3277A2032C17A5F033B7251B2C212C42AE51CAB586AC077C6770EC3E51FAA10D9CE87DBDC903097B9080051D4ED5E2493BF70BDC3EE5800A608B59AF4F0F8C19",
+              "priv_key": "96D57447E32896200A540CE2E9A0E332E8AD878CF41F2F56721788E9D589C795A08BCB3290F7F19645A5F8915D2C02F1D24EEFD682A9CE46338AC9E42A954F17",
               "to_address": "0000000000000000000000000000000000000010",
               "amount": 42
             },
-            "id": "2YhhQ5+MkN8zGRHNP/vMZgMwVWb7RbJczKe19aLTr9o=",
+            "id": "xd4vGu+UKClr/VUP0HnwNit39RsFRMHWgauL1zF3M/g=",
             "jsonrpc": "2.0"
           }
         }
@@ -26,7 +26,7 @@
               "contract_addr": ""
             },
             "error": null,
-            "id": "2YhhQ5+MkN8zGRHNP/vMZgMwVWb7RbJczKe19aLTr9o=",
+            "id": "xd4vGu+UKClr/VUP0HnwNit39RsFRMHWgauL1zF3M/g=",
             "jsonrpc": "2.0"
           }
         }
@@ -39,7 +39,7 @@
             "params": {
               "address": "0000000000000000000000000000000000000010"
             },
-            "id": "6FLX/NktHWu7/dAPiFNFYmEFRtd6yQztexR8LA4Psc8=",
+            "id": "6X7Q+HOvQenIen6x+x8xy5VKUyzOrqc3Q5M5xSe/AAE=",
             "jsonrpc": "2.0"
           }
         }
@@ -64,25 +64,67 @@
               }
             },
             "error": null,
-            "id": "6FLX/NktHWu7/dAPiFNFYmEFRtd6yQztexR8LA4Psc8=",
+            "id": "6X7Q+HOvQenIen6x+x8xy5VKUyzOrqc3Q5M5xSe/AAE=",
             "jsonrpc": "2.0"
           }
         }
       }
     ]
   },
-  "validator": {
-    "address": "D40EE91D5C4F29D63B91CF5F0A97C83B98D32FBF",
-    "pub_key": [
-      1,
-      "9CE87DBDC903097B9080051D4ED5E2493BF70BDC3EE5800A608B59AF4F0F8C19"
-    ],
-    "priv_key": [
-      1,
-      "3277A2032C17A5F033B7251B2C212C42AE51CAB586AC077C6770EC3E51FAA10D9CE87DBDC903097B9080051D4ED5E2493BF70BDC3EE5800A608B59AF4F0F8C19"
-    ],
-    "last_height": 0,
-    "last_round": 0,
-    "last_step": 0
+  "initDir": {
+    "accounts.json": {
+      "test-transactions_full_000": {
+        "address": "EFBC1070DF34860F9E5EE9B35B1116BBBF41329B",
+        "pubKey": "A08BCB3290F7F19645A5F8915D2C02F1D24EEFD682A9CE46338AC9E42A954F17",
+        "privKey": "96D57447E32896200A540CE2E9A0E332E8AD878CF41F2F56721788E9D589C795A08BCB3290F7F19645A5F8915D2C02F1D24EEFD682A9CE46338AC9E42A954F17"
+      }
+    },
+    "genesis.json": {
+      "chain_id": "test-transactions",
+      "accounts": [
+        {
+          "address": "EFBC1070DF34860F9E5EE9B35B1116BBBF41329B",
+          "amount": 99999999999999,
+          "name": "test-transactions_full_000",
+          "permissions": {
+            "base": {
+              "perms": 16383,
+              "set": 16383
+            },
+            "roles": []
+          }
+        }
+      ],
+      "validators": [
+        {
+          "pub_key": [
+            1,
+            "A08BCB3290F7F19645A5F8915D2C02F1D24EEFD682A9CE46338AC9E42A954F17"
+          ],
+          "name": "test-transactions_full_000",
+          "amount": 9999999999,
+          "unbond_to": [
+            {
+              "address": "EFBC1070DF34860F9E5EE9B35B1116BBBF41329B",
+              "amount": 9999999999
+            }
+          ]
+        }
+      ]
+    },
+    "priv_validator.json": {
+      "address": "EFBC1070DF34860F9E5EE9B35B1116BBBF41329B",
+      "pub_key": [
+        1,
+        "A08BCB3290F7F19645A5F8915D2C02F1D24EEFD682A9CE46338AC9E42A954F17"
+      ],
+      "priv_key": [
+        1,
+        "96D57447E32896200A540CE2E9A0E332E8AD878CF41F2F56721788E9D589C795A08BCB3290F7F19645A5F8915D2C02F1D24EEFD682A9CE46338AC9E42A954F17"
+      ],
+      "last_height": 0,
+      "last_round": 0,
+      "last_step": 0
+    }
   }
 }
