@@ -21,9 +21,6 @@ $HOME/bin/docker-machine && chmod +x $HOME/bin/docker-machine
   sudo apt-get install --assume-yes --quiet eris
   eris init
 
-  # Make a blockchain for testing.
-  npm run make
-
   # Test Eris DB against our expectations of it.
   TEST=server npm test
 fi
