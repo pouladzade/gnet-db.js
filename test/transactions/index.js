@@ -8,8 +8,7 @@ before(vector.before(__dirname, {protocol: 'http:'}))
 after(vector.after())
 
 it('sends ether from one account to another',
-  vector.it(function ({db, validator}) {
-    const privateKey = validator.priv_key[1]
+  vector.it(function ({db, validator: {priv_key: [, privateKey]}}) {
     const destination = '0000000000000000000000000000000000000010'
     const amount = 42
 
