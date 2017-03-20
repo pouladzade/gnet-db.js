@@ -25,11 +25,13 @@
   },
   "devDependencies": {
     "bundle-dependencies": "1.0.2",
+    "husky": "0.13.2",
     "istanbul": "0.4.5",
     "jsdoc": "3.4.3",
     "mocha": "3.2.0",
     "request": "2.81.0",
     "request-promise": "4.1.1",
+    "standard": "9.0.2",
     "test-vector": "0.1.0",
     "ws": "2.2.1"
   },
@@ -56,7 +58,9 @@
   },
   "scripts": {
     "doc": "jsdoc --configure JSDoc/conf.json --destination doc index.js lib README.md",
+    "precommit": "standard",
     "predoc": "rm -rf doc",
+    "pretest": "standard",
     "test": "mocha --recursive test"
   },
   "standard": {

@@ -5,19 +5,18 @@
  * @author Andreas Olofsson (andreas@erisindustries.com)
  * @module index
  */
-'use strict';
+'use strict'
 
-var erisdb = require('./lib/erisdb');
+var erisdb = require('./lib/erisdb')
 const generic = require('@nodeguy/generic')
 const I = require('iteray')
 const is = require('@nodeguy/type').is
 const jsonRpc = require('@nodeguy/json-rpc')
 const R = require('ramda')
 const server = require('./lib/server')
-const stream = require('stream')
 const util = require('util')
-var validation = require('./lib/validation');
-var url = require('url');
+var validation = require('./lib/validation')
+var url = require('url')
 
 const createInstance = generic.function()
 
@@ -34,8 +33,8 @@ createInstance.method([is(Function)],
       I.forEach(debuglog)
     )
 
-    var validator = new validation.SinglePolicyValidator(true);
-    return erisdb.createInstance(server(logged), validator);
+    var validator = new validation.SinglePolicyValidator(true)
+    return erisdb.createInstance(server(logged), validator)
   }
 )
 
