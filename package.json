@@ -1,17 +1,12 @@
 {
-  "name": "eris-db",
-  "description": "Javascript library that calls an erisdb server over rpc.",
+  "name": "@monax/legacy-db",
+  "description": "Javascript library that calls a Hyperledger Burrow server over rpc.",
   "version": "0.15.12",
-  "author": "AndreasEris",
-  "authors": [
-    {
-      "name": "Andreas Olofsson",
-      "email": "andreas@erisindustries.com",
-      "url": "http://erisindustries.com"
-    }
-  ],
+  "author": {
+    "name": "Andreas Olofsson"
+  },
   "bugs": {
-    "url": "https://github.com/eris-ltd/eris-db.js/issues"
+    "url": "https://github.com/monax/legacy-db.js/issues"
   },
   "dependencies": {
     "@nodeguy/generic": "3.0.0",
@@ -24,7 +19,6 @@
     "ramda": "0.23.0"
   },
   "devDependencies": {
-    "bundle-dependencies": "1.0.2",
     "husky": "0.13.2",
     "istanbul": "0.4.5",
     "jsdoc": "3.4.3",
@@ -38,11 +32,11 @@
   "engines": {
     "node": ">=6"
   },
-  "homepage": "https://github.com/eris-ltd/eris-db.js",
+  "homepage": "https://github.com/monax/legacy-db.js",
   "keywords": [
-    "Monax",
-    "eris",
-    "erisdb"
+    "Burrow",
+    "Hyperledger",
+    "Monax"
   ],
   "license": "GPL-3.0",
   "main": "./index.js",
@@ -54,7 +48,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/eris-ltd/eris-db.js"
+    "url": "https://github.com/monax/legacy-db.js"
   },
   "scripts": {
     "doc": "jsdoc --configure JSDoc/conf.json --destination doc index.js lib README.md",

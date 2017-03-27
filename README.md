@@ -1,13 +1,31 @@
-# erisdb-js (Alpha)
+# @monax/legacy-db.js (Alpha)
 
-This is a JavaScript API for communicating with a [ErisDB](https://github.com/eris-ltd/eris-db) server.
+This is a JavaScript API for communicating with a [Hyperledger Burrow](https://github.com/hyperledger/burrow) server.
+
+## New Name
+
+This library used to be named `eris-db.js`.  It is now `@monax/legacy-db.js` as part of the company-wide renaming to Monax and also to distinguish it from the upcoming new client API.  Although it is a legacy API it will continue to be supported.
+
+To use new versions of the library in existing code, change the line in your `package.json` which looks like this:
+
+```
+"eris-db": "0.15.12",
+```
+
+to make it look like this:
+
+````
+"@monax/legacy-db": "0.16.0",
+```
+
+and run `npm install`.
 
 ## Installation
 
 ### Prerequisites
 
 * [Git](https://git-scm.com/)
-* [Monax Eris](https://monax.io/) version 0.12
+* [Monax](https://monax.io/) version 0.16
 * [Node.js](https://nodejs.org/) version 6 or higher
 
 You can check the installed version of Node.js with the command:
@@ -22,23 +40,23 @@ update it using [NodeSource's distribution](https://github.com/nodesource/distri
 ### To Install
 
 ```shell
-$ npm install eris-db
+$ npm install @monax/legacy-db
 ```
 
 ## Usage
 
-If you created an ErisDB server using the [Eris CLI](https://github.com/eris-ltd/eris-cli) tool, you can find out its IP address using the following command:
+If you created a Burrow server using the [Monax CLI](https://github.com/monax/cli) tool, you can find out its IP address using the following command:
 
 ```
-$ eris chains inspect <name of ErisDB server> NetworkSettings.IPAddress
+$ monax chains inspect <name of Burrow server> NetworkSettings.IPAddress
 ```
 
-The main class is `ErisDB`. A standard `ErisDB` instance is created like this:
+The main class is `Burrow`. A standard `Burrow` instance is created like this:
 
 ```JavaScript
-var edbFactory = require('eris-db');
+var burrowFactory = require('legacy-db');
 
-var edb = edbFactory.createInstance("http://<IP address>:1337/rpc");
+var burrow = burrowFactory.createInstance("http://<IP address>:1337/rpc");
 ```
 
 The parameters for `createInstance` is the server URL as a string. The client-type is chosen based on the URL scheme. As of now, the supported schemes are: `http` and `ws` (websockets). No additional configuration is needed.
@@ -49,19 +67,19 @@ There are bindings for all the RPC methods. All functions are on the form `funct
 
 This is the over-all structure of the library. The `unsafe` flag means a private key is either sent or received, so should be used with care (dev only).
 
-NOTE: There will be links to the proper jsdoc and integration with erisindustries.com. For now, the components point to the actual code files and methods points to the web-API method in question.
+NOTE: There will be links to the proper jsdoc and integration with Monax.io. For now, the components point to the actual code files and methods points to the web-API method in question.
 
-### ErisDB
+### Burrow
 
 | Component Name | Accessor |
 | :------------- | :------- |
-| Accounts | [ErisDB.accounts()](https://github.com/eris-ltd/erisdb-js/blob/master/lib/accounts.js) |
-| Blockchain | [ErisDB.blockchain()](https://github.com/eris-ltd/erisdb-js/blob/master/lib/blockchain.js) |
-| Consensus | [ErisDB.consensus()](https://github.com/eris-ltd/erisdb-js/blob/master/lib/consensus.js) |
-| Events | [ErisDB.events()](https://github.com/eris-ltd/erisdb-js/blob/master/lib/events.js) |
-| NameReg | [ErisDB.namereg()](https://github.com/eris-ltd/erisdb-js/blob/master/lib/namereg.js) |
-| Network | [ErisDB.network()](https://github.com/eris-ltd/erisdb-js/blob/master/lib/network.js) |
-| Transactions | [ErisDB.txs()](https://github.com/eris-ltd/erisdb-js/blob/master/lib/transactions.js) |
+| Accounts | [Burrow.accounts()](https://github.com/monax/legacy-db.js/blob/master/lib/accounts.js) |
+| Blockchain | [Burrow.blockchain()](https://github.com/monax/legacy-db.js/blob/master/lib/blockchain.js) |
+| Consensus | [Burrow.consensus()](https://github.com/monax/legacy-db.js/blob/master/lib/consensus.js) |
+| Events | [Burrow.events()](https://github.com/monax/legacy-db.js/blob/master/lib/events.js) |
+| NameReg | [Burrow.namereg()](https://github.com/monax/legacy-db.js/blob/master/lib/namereg.js) |
+| Network | [Burrow.network()](https://github.com/monax/legacy-db.js/blob/master/lib/network.js) |
+| Transactions | [Burrow.txs()](https://github.com/monax/legacy-db.js/blob/master/lib/transactions.js) |
 
 ### Components
 
@@ -71,11 +89,11 @@ The accounts object has methods for getting account and account-storage data.
 
 | Method | RPC method | Notes |
 | :----- | :--------- | :---- |
-| Accounts.getAccounts | [erisdb.getAccounts](https://monax.io/docs/documentation/db/latest/specifications/api/#getaccounts) | |
-| Accounts.getAccount | [erisdb.getAccount](https://monax.io/docs/documentation/db/latest/specifications/api/#getaccount) | |
-| Accounts.getStorage | [erisdb.getStorage](https://monax.io/docs/documentation/db/latest/specifications/api/#getstorage) | |
-| Accounts.getStorageAt | [erisdb.getStorageAt](https://monax.io/docs/documentation/db/latest/specifications/api/#getstorageat) | |
-| Accounts.genPrivAccount | [erisdb.genPrivAccount](https://monax.io/docs/documentation/db/latest/specifications/api/#genprivaccount) | unsafe |
+| Accounts.getAccounts | [Burrow.getAccounts](https://monax.io/docs/documentation/db/latest/specifications/api/#getaccounts) | |
+| Accounts.getAccount | [Burrow.getAccount](https://monax.io/docs/documentation/db/latest/specifications/api/#getaccount) | |
+| Accounts.getStorage | [Burrow.getStorage](https://monax.io/docs/documentation/db/latest/specifications/api/#getstorage) | |
+| Accounts.getStorageAt | [Burrow.getStorageAt](https://monax.io/docs/documentation/db/latest/specifications/api/#getstorageat) | |
+| Accounts.genPrivAccount | [Burrow.genPrivAccount](https://monax.io/docs/documentation/db/latest/specifications/api/#genprivaccount) | unsafe |
 
 #### BlockChain
 
@@ -83,13 +101,13 @@ The accounts object has methods for getting blockchain-related data, such as a l
 
 | Method | RPC method | Notes |
 | :----- | :--------- | :---- |
-| BlockChain.getInfo |  [erisdb.getBlockchainInfo](https://monax.io/docs/documentation/db/latest/specifications/api/#getblockchaininfo) | |
-| BlockChain.getChainId | [erisdb.getChainId](https://monax.io/docs/documentation/db/latest/specifications/api/#getchainid) | |
-| BlockChain.getGenesisHash | [erisdb.getGenesisHash](https://monax.io/docs/documentation/db/latest/specifications/api/#getgenesishash) | |
-| BlockChain.getLatestBlockHeight | [erisdb.getLatestBlockHeight](https://monax.io/docs/documentation/db/latest/specifications/api/#getlatestblockheight) | |
-| BlockChain.getLatestBlock | [erisdb.getLatestBlock](https://monax.io/docs/documentation/db/latest/specifications/api/#getlatestblock) | |
-| BlockChain.getBlocks | [erisdb.getBlocks](https://monax.io/docs/documentation/db/latest/specifications/api/#getblocks) | |
-| BlockChain.getBlock | [erisdb.getBlock](https://monax.io/docs/documentation/db/latest/specifications/api/#getblock) | |
+| BlockChain.getInfo |  [Burrow.getBlockchainInfo](https://monax.io/docs/documentation/db/latest/specifications/api/#getblockchaininfo) | |
+| BlockChain.getChainId | [Burrow.getChainId](https://monax.io/docs/documentation/db/latest/specifications/api/#getchainid) | |
+| BlockChain.getGenesisHash | [Burrow.getGenesisHash](https://monax.io/docs/documentation/db/latest/specifications/api/#getgenesishash) | |
+| BlockChain.getLatestBlockHeight | [Burrow.getLatestBlockHeight](https://monax.io/docs/documentation/db/latest/specifications/api/#getlatestblockheight) | |
+| BlockChain.getLatestBlock | [Burrow.getLatestBlock](https://monax.io/docs/documentation/db/latest/specifications/api/#getlatestblock) | |
+| BlockChain.getBlocks | [Burrow.getBlocks](https://monax.io/docs/documentation/db/latest/specifications/api/#getblocks) | |
+| BlockChain.getBlock | [Burrow.getBlock](https://monax.io/docs/documentation/db/latest/specifications/api/#getblock) | |
 
 #### Consensus
 
@@ -97,8 +115,8 @@ The consensus object has methods for getting consensus-related data.
 
 | Method | RPC method | Notes |
 | :----- | :--------- | :---- |
-| Consensus.getState |   [erisdb.getConsensusState](https://monax.io/docs/documentation/db/latest/specifications/api/#getconsensusstate) | |
-| Consensus.getValidators | [erisdb.getValidators](https://monax.io/docs/documentation/db/latest/specifications/api/#getvalidators) | |
+| Consensus.getState |   [Burrow.getConsensusState](https://monax.io/docs/documentation/db/latest/specifications/api/#getconsensusstate) | |
+| Consensus.getValidators | [Burrow.getValidators](https://monax.io/docs/documentation/db/latest/specifications/api/#getvalidators) | |
 
 #### Events
 
@@ -106,9 +124,9 @@ The tendermint client will generate and fire off events when important things ha
 
 | Method | RPC method | Notes |
 | :----- | :--------- | :---- |
-| Events.subscribe | [erisdb.eventSubscribe](https://monax.io/docs/documentation/db/latest/specifications/api/#eventsubscribe) | |
-| Events.unsubscribe | [erisdb.eventUnsubscribe](https://monax.io/docs/documentation/db/latest/specifications/api/#eventunubscribe) | |
-| Events.poll | [erisdb.eventPoll](https://monax.io/docs/documentation/db/latest/specifications/api/#eventpoll) | |
+| Events.subscribe | [Burrow.eventSubscribe](https://monax.io/docs/documentation/db/latest/specifications/api/#eventsubscribe) | |
+| Events.unsubscribe | [Burrow.eventUnsubscribe](https://monax.io/docs/documentation/db/latest/specifications/api/#eventunubscribe) | |
+| Events.poll | [Burrow.eventPoll](https://monax.io/docs/documentation/db/latest/specifications/api/#eventpoll) | |
 
 ##### Helpers
 
@@ -142,8 +160,8 @@ The NameReg object has methods for accessing the name registry.
 
 | Method | RPC method | Notes |
 | :----- | :--------- | :---- |
-| NameReg.getEntry | [erisdb.getNameRegEntry](https://monax.io/docs/documentation/db/latest/specifications/api/#get-namereg-entry) | |
-| NameReg.getEntries | [erisdb.getNameRegEntries](https://monax.io/docs/documentation/db/latest/specifications/api/#get-namereg-entries) | |
+| NameReg.getEntry | [Burrow.getNameRegEntry](https://monax.io/docs/documentation/db/latest/specifications/api/#get-namereg-entry) | |
+| NameReg.getEntries | [Burrow.getNameRegEntries](https://monax.io/docs/documentation/db/latest/specifications/api/#get-namereg-entries) | |
 
 #### Network
 
@@ -153,13 +171,13 @@ Client Version may be a bit misplaced
 
 | Method | RPC method | Notes |
 | :----- | :--------- | :---- |
-| Network.getInfo | [erisdb.getNetworkInfo](https://monax.io/docs/documentation/db/latest/specifications/api/#getnetworkinfo) |  |
-| Network.getClientVersion | [erisdb.getClientVersion](https://monax.io/docs/documentation/db/latest/specifications/api/#getclientversion) | |
-| Network.getMoniker | [erisdb.getMoniker](https://monax.io/docs/documentation/db/latest/specifications/api/#getmoniker) | |
-| Network.isListening | [erisdb.isListening](https://monax.io/docs/documentation/db/latest/specifications/api/#islistening) | |
-| Network.getListeners | [erisdb.getListeners](https://monax.io/docs/documentation/db/latest/specifications/api/#getlisteners) | |
-| Network.getPeers | [erisdb.getPeers](https://monax.io/docs/documentation/db/latest/specifications/api/#getpeers) | |
-| Network.getPeer | [erisdb.getPeer](https://monax.io/docs/documentation/db/latest/specifications/api/#getpeer) | |
+| Network.getInfo | [Burrow.getNetworkInfo](https://monax.io/docs/documentation/db/latest/specifications/api/#getnetworkinfo) |  |
+| Network.getClientVersion | [Burrow.getClientVersion](https://monax.io/docs/documentation/db/latest/specifications/api/#getclientversion) | |
+| Network.getMoniker | [Burrow.getMoniker](https://monax.io/docs/documentation/db/latest/specifications/api/#getmoniker) | |
+| Network.isListening | [Burrow.isListening](https://monax.io/docs/documentation/db/latest/specifications/api/#islistening) | |
+| Network.getListeners | [Burrow.getListeners](https://monax.io/docs/documentation/db/latest/specifications/api/#getlisteners) | |
+| Network.getPeers | [Burrow.getPeers](https://monax.io/docs/documentation/db/latest/specifications/api/#getpeers) | |
+| Network.getPeer | [Burrow.getPeer](https://monax.io/docs/documentation/db/latest/specifications/api/#getpeer) | |
 
 #### Transactions
 
@@ -179,13 +197,13 @@ There are two types of calls. `Call` takes a data string and an account address 
 
 | Method | RPC method | Notes |
 | :----- | :--------- | :---- |
-| Transactions.broadcastTx | [erisdb.broadcastTx](https://monax.io/docs/documentation/db/latest/specifications/api/#broadcasttx) | see below |
-| Transactions.getUnconfirmedTxs | [erisdb.getUnconfirmedTxs](https://monax.io/docs/documentation/db/latest/specifications/api/#getunconfirmedtxs) | |
-| Transactions.call | [erisdb.call](https://monax.io/docs/documentation/db/latest/specifications/api/#call) | |
-| Transactions.callCode | [erisdb.callCode](https://monax.io/docs/documentation/db/latest/specifications/api/#callcode) | |
-| Transactions.transact | [erisdb.transact](https://monax.io/docs/documentation/db/latest/specifications/api/#transact) | unsafe |
-| Transactions.transactAndHold | [erisdb.transactAndHold](https://monax.io/docs/documentation/db/latest/specifications/api/#transact-and-hold) | unsafe |
-| Transactions.transactNameReg | [erisdb.transactNameReg](https://monax.io/docs/documentation/db/latest/specifications/api/#transactnamereg) | unsafe |
+| Transactions.broadcastTx | [Burrow.broadcastTx](https://monax.io/docs/documentation/db/latest/specifications/api/#broadcasttx) | see below |
+| Transactions.getUnconfirmedTxs | [Burrow.getUnconfirmedTxs](https://monax.io/docs/documentation/db/latest/specifications/api/#getunconfirmedtxs) | |
+| Transactions.call | [Burrow.call](https://monax.io/docs/documentation/db/latest/specifications/api/#call) | |
+| Transactions.callCode | [Burrow.callCode](https://monax.io/docs/documentation/db/latest/specifications/api/#callcode) | |
+| Transactions.transact | [Burrow.transact](https://monax.io/docs/documentation/db/latest/specifications/api/#transact) | unsafe |
+| Transactions.transactAndHold | [Burrow.transactAndHold](https://monax.io/docs/documentation/db/latest/specifications/api/#transact-and-hold) | unsafe |
+| Transactions.transactNameReg | [Burrow.transactNameReg](https://monax.io/docs/documentation/db/latest/specifications/api/#transactnamereg) | unsafe |
 
 `broadcastTx` is useless until we add a client-side signing solution.
 
@@ -201,13 +219,13 @@ To test the library against pre-recorded vectors:
 npm test
 ```
 
-To test the library against Eris DB while recording vectors:
+To test the library against Burrow while recording vectors:
 
 ```
 TEST=record npm test
 ```
 
-To test Eris DB against pre-recorded vectors without exercising the library:
+To test Burrow against pre-recorded vectors without exercising the library:
 
 ```
 TEST=server npm test
@@ -215,7 +233,7 @@ TEST=server npm test
 
 ## Debugging
 
-Debugging information will display on `stderr` if the library is run with `NODE_DEBUG=eris` in the environment.
+Debugging information will display on `stderr` if the library is run with `NODE_DEBUG=monax` in the environment.
 
 ## Copyright
 
