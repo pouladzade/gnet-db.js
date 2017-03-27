@@ -2,7 +2,7 @@
 set -o errexit
 set -o xtrace
 
-# Test against mock Eris DB.
+# Test against mock Monax DB.
 npm test
 
 if [ "$CIRCLE_BRANCH" = "master" ]; then
@@ -21,6 +21,6 @@ $HOME/bin/docker-machine && chmod +x $HOME/bin/docker-machine
   sudo apt-get install --assume-yes --quiet eris
   eris init
 
-  # Test Eris DB against our expectations of it.
+  # Test Monax DB against our expectations of it.
   TEST=server npm test
 fi

@@ -23,7 +23,7 @@ const createInstance = generic.function()
 const inspect = (object) =>
   util.inspect(object, {depth: null, colors: true})
 
-const debuglog = R.compose(util.debuglog('eris'), inspect)
+const debuglog = R.compose(util.debuglog('monax'), inspect)
 
 createInstance.method([is(Function)],
   (transport) => {
@@ -49,7 +49,7 @@ createInstance.method([is(String)],
     const parsed = url.parse(urlString)
 
     if (parsed.protocol === 'ws:') {
-      throw new Error('WebSocket is disabled until Eris DB complies with ' +
+      throw new Error('WebSocket is disabled until Monax DB complies with ' +
         'JSON-RPC.  See: https://github.com/eris-ltd/eris-db/issues/355')
     } else {
       return createInstance(jsonRpc.transport(parsed))

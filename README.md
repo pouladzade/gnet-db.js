@@ -1,6 +1,24 @@
-# erisdb-js (Alpha)
+# @monax/legacy-db.js (Alpha)
 
-This is a JavaScript API for communicating with a [ErisDB](https://github.com/eris-ltd/eris-db) server.
+This is a JavaScript API for communicating with a [Monax DB](https://github.com/monax/eris-db) server.
+
+## New Name
+
+This library used to be named `eris-db.js`.  It is now `@monax/legacy-db.js` as part of the company-wide renaming to Monax and also to distinguish it from the upcoming new client API.  Although it is a legacy API it will continue to be supported.
+
+To use new versions of the library in existing code, change the line in your `package.json` which looks like this:
+
+```
+"eris-db": "0.15.12",
+```
+
+to make it look like this:
+
+````
+"@monax/legacy-db": "0.15.13",
+```
+
+and run `npm install`.
 
 ## Installation
 
@@ -215,7 +233,7 @@ TEST=server npm test
 
 ## Debugging
 
-Debugging information will display on `stderr` if the library is run with `NODE_DEBUG=eris` in the environment.
+Debugging information will display on `stderr` if the library is run with `NODE_DEBUG=monax` in the environment.
 
 ## Copyright
 

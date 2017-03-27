@@ -14,7 +14,7 @@ version=$(jq --raw-output .version package.json | cut -d . -f 1-2)
 # Build
 npm run doc
 cd $HOME
-git clone git@github.com:eris-ltd/$repository.git
+git clone git@github.com:monax/$repository.git
 cd $repository/content/docs/documentation
 mkdir --parents $name
 cd $name
