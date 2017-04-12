@@ -14,7 +14,7 @@ To use new versions of the library in existing code, change the line in your `pa
 
 to make it look like this:
 
-````
+```
 "@monax/legacy-db": "0.16.0",
 ```
 
@@ -48,13 +48,13 @@ $ npm install @monax/legacy-db
 If you created a Burrow server using the [Monax CLI](https://github.com/monax/cli) tool, you can find out its IP address using the following command:
 
 ```
-$ monax chains inspect <name of Burrow server> NetworkSettings.IPAddress
+$ monax chains ip <name of Burrow server>
 ```
 
 The main class is `Burrow`. A standard `Burrow` instance is created like this:
 
 ```JavaScript
-var burrowFactory = require('legacy-db');
+var burrowFactory = require('@monax/legacy-db');
 
 var burrow = burrowFactory.createInstance("http://<IP address>:1337/rpc");
 ```
