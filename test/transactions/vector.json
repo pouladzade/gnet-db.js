@@ -5,13 +5,13 @@
         "input": {
           "done": false,
           "value": {
-            "method": "erisdb.sendAndHold",
+            "method": "burrow.sendAndHold",
             "params": {
-              "priv_key": "A5507595F13BF2052BD9DFD30A46E2358E146B03EDF2B6135CFD12D91A019CC0F26C1850E3D0F50AC8B3A5D2C1C449981DA8C159D094F331028DDB861DEE6304",
+              "priv_key": "989F2510DECE462A93F7E18959187D8F83723FFFF9AFC5ED93561BCF93E57FA8A722CC7C8496AB96E263961FDF77269B391C079EBA96D322EF7953DE39133E59",
               "to_address": "0000000000000000000000000000000000000010",
               "amount": 42
             },
-            "id": "eR7DZw4K16qOeE3FggWJrYgHzZnD/zNr5ebYrtMA5sU=",
+            "id": "LSvjqpm76LbeS7b9CMJzD1PkAPkekKQC1HSwWvbStV8=",
             "jsonrpc": "2.0"
           }
         }
@@ -21,12 +21,11 @@
           "done": false,
           "value": {
             "result": {
-              "tx_hash": "eR7DZw4K16qOeE3FggWJrYgHzZnD/zNr5ebYrtMA5sU=",
+              "tx_hash": "LSvjqpm76LbeS7b9CMJzD1PkAPkekKQC1HSwWvbStV8=",
               "creates_contract": 0,
               "contract_addr": ""
             },
-            "error": null,
-            "id": "eR7DZw4K16qOeE3FggWJrYgHzZnD/zNr5ebYrtMA5sU=",
+            "id": "LSvjqpm76LbeS7b9CMJzD1PkAPkekKQC1HSwWvbStV8=",
             "jsonrpc": "2.0"
           }
         }
@@ -35,11 +34,11 @@
         "input": {
           "done": false,
           "value": {
-            "method": "erisdb.getAccount",
+            "method": "burrow.getAccount",
             "params": {
               "address": "0000000000000000000000000000000000000010"
             },
-            "id": "190vd9yAkPStx9YRJlj0+1yHYvspQewTXhVypeUHPFM=",
+            "id": "V5zbRAK49BZm5HVDvLEExefluMHn3jbz/n7TUhNhW1w=",
             "jsonrpc": "2.0"
           }
         }
@@ -63,8 +62,7 @@
                 "roles": []
               }
             },
-            "error": null,
-            "id": "190vd9yAkPStx9YRJlj0+1yHYvspQewTXhVypeUHPFM=",
+            "id": "V5zbRAK49BZm5HVDvLEExefluMHn3jbz/n7TUhNhW1w=",
             "jsonrpc": "2.0"
           }
         }
@@ -72,18 +70,21 @@
     ]
   },
   "initDir": {
-    "accounts.json": {
-      "test-transactions_full_000": {
-        "address": "4D4EC02DE49581209FA59315C5A660D4B9D63D06",
-        "pubKey": "F26C1850E3D0F50AC8B3A5D2C1C449981DA8C159D094F331028DDB861DEE6304",
-        "privKey": "A5507595F13BF2052BD9DFD30A46E2358E146B03EDF2B6135CFD12D91A019CC0F26C1850E3D0F50AC8B3A5D2C1C449981DA8C159D094F331028DDB861DEE6304"
-      }
-    },
     "genesis.json": {
+      "genesis_time": "2017-04-12T07:04:34.627Z",
       "chain_id": "test-transactions",
+      "params": {
+        "global_permissions": {
+          "base": {
+            "perms": 2302,
+            "set": 16383
+          },
+          "roles": []
+        }
+      },
       "accounts": [
         {
-          "address": "4D4EC02DE49581209FA59315C5A660D4B9D63D06",
+          "address": "9D2C828A3805500D137D3932EE664ED34DEBCC2F",
           "amount": 99999999999999,
           "name": "test-transactions_full_000",
           "permissions": {
@@ -99,13 +100,13 @@
         {
           "pub_key": [
             1,
-            "F26C1850E3D0F50AC8B3A5D2C1C449981DA8C159D094F331028DDB861DEE6304"
+            "A722CC7C8496AB96E263961FDF77269B391C079EBA96D322EF7953DE39133E59"
           ],
-          "name": "test-transactions_full_000",
           "amount": 9999999999,
+          "name": "test-transactions_full_000",
           "unbond_to": [
             {
-              "address": "4D4EC02DE49581209FA59315C5A660D4B9D63D06",
+              "address": "9D2C828A3805500D137D3932EE664ED34DEBCC2F",
               "amount": 9999999999
             }
           ]
@@ -113,14 +114,14 @@
       ]
     },
     "priv_validator.json": {
-      "address": "4D4EC02DE49581209FA59315C5A660D4B9D63D06",
+      "address": "9D2C828A3805500D137D3932EE664ED34DEBCC2F",
       "pub_key": [
         1,
-        "F26C1850E3D0F50AC8B3A5D2C1C449981DA8C159D094F331028DDB861DEE6304"
+        "A722CC7C8496AB96E263961FDF77269B391C079EBA96D322EF7953DE39133E59"
       ],
       "priv_key": [
         1,
-        "A5507595F13BF2052BD9DFD30A46E2358E146B03EDF2B6135CFD12D91A019CC0F26C1850E3D0F50AC8B3A5D2C1C449981DA8C159D094F331028DDB861DEE6304"
+        "989F2510DECE462A93F7E18959187D8F83723FFFF9AFC5ED93561BCF93E57FA8A722CC7C8496AB96E263961FDF77269B391C079EBA96D322EF7953DE39133E59"
       ],
       "last_height": 0,
       "last_round": 0,

@@ -9,7 +9,7 @@
     "dateFormat": "ddd MMM Do YYYY",
     "outputSourceFiles": true,
     "outputSourcePath": true,
-    "systemName": "ErisDB",
+    "systemName": "Monax DB",
     "copyright": "Copyright © 2014-2016 Monax",
     "navType": "vertical",
     "theme": "cerulean",
