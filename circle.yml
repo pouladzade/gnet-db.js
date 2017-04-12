@@ -22,4 +22,3 @@ deployment:
     commands:
       - printf "$NPM_USERNAME\n$NPM_PASSWORD\n$NPM_EMAIL\n" | npm login
       - npm publish
-      - JSDoc/publish.sh
