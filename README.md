@@ -1,10 +1,10 @@
-# @monax/legacy-db.js (Alpha)
+# @monax/legacy-db.js
 
-This is a JavaScript API for communicating with a [Hyperledger Burrow](https://github.com/hyperledger/burrow) server.
+This is a JavaScript client for communicating with a [Hyperledger Burrow](https://github.com/hyperledger/burrow) server.
 
 ## New Name
 
-This library used to be named `eris-db.js`.  It is now `@monax/legacy-db.js` as part of the company-wide renaming to Monax and also to distinguish it from the upcoming new client API.  Although it is a legacy API it will continue to be supported.
+This library used to be named `eris-db.js`.  It is now `@monax/legacy-db.js` as part of the company-wide renaming to Monax.
 
 To use new versions of the library in existing code, change the line in your `package.json` which looks like this:
 
@@ -234,6 +234,10 @@ TEST=server npm test
 ## Debugging
 
 Debugging information will display on `stderr` if the library is run with `NODE_DEBUG=monax` in the environment.
+
+## Publishing
+
+To publish a new version on [NPM](https://www.npmjs.com/), push it to `master`.  If the tests pass on CircleCI then it will be published automatically.
 
 ## Copyright
 

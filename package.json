@@ -1,6 +1,6 @@
 {
   "name": "@monax/legacy-db",
-  "description": "Javascript library that calls a Hyperledger Burrow server over rpc.",
+  "description": "JavaScript client for communicating with a Hyperledger Burrow server",
   "version": "0.16.4",
   "author": {
     "name": "Andreas Olofsson"
