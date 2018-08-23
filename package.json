@@ -1,13 +1,4 @@
 {
-  "name": "@monax/legacy-db",
-  "description": "Javascript library that calls a Hyperledger Burrow server over rpc.",
-  "version": "0.16.4",
-  "author": {
-    "name": "Andreas Olofsson"
-  },
-  "bugs": {
-    "url": "https://github.com/monax/legacy-db.js/issues"
-  },
   "dependencies": {
     "@nodeguy/generic": "3.0.0",
     "@nodeguy/json-rpc": "0.3.2",
@@ -18,6 +9,8 @@
     "mz": "2.6.0",
     "ramda": "0.23.0"
   },
+  "deprecated": false,
+  "description": "Javascript library that calls a Gallactic node over rpc.",
   "devDependencies": {
     "husky": "0.13.2",
     "istanbul": "0.4.5",
@@ -32,40 +25,23 @@
   "engines": {
     "node": ">=6"
   },
-  "homepage": "https://github.com/monax/legacy-db.js",
-  "keywords": [
-    "Burrow",
-    "Hyperledger",
-    "Monax"
+  "homepage": "https://github.com/pouladzade/gnet-db.js",
+  "keywords": [    
+    "gallactic",
+    "gnet"
   ],
   "license": "GPL-3.0",
   "main": "./index.js",
   "maintainers": [
     {
-      "name": "David Braun",
-      "email": "David@Monax.io"
+      "name": "Ahmad Pouladzadeh",
+      "email": "pouladzade@gmail.com"
     }
   ],
+  "name": "gnet-db",
   "repository": {
     "type": "git",
-    "url": "https://github.com/monax/legacy-db.js"
+    "url": "git+https://github.com/pouladzade/gnet-db.js.git"
   },
-  "scripts": {
-    "doc": "jsdoc --configure JSDoc/conf.json --destination doc index.js lib README.md",
-    "precommit": "standard",
-    "predoc": "rm -rf doc",
-    "pretest": "standard",
-    "test": "mocha --recursive test"
-  },
-  "standard": {
-    "globals": [
-      "after",
-      "afterEach",
-      "before",
-      "beforeEach",
-      "describe",
-      "it",
-      "run"
-    ]
-  }
+  "version": "0.0.1"
 }
